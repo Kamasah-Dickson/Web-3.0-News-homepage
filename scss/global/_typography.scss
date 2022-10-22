@@ -1,4 +1,6 @@
 @use "../util/" as u;
+@use "../global/fonts" as g;
+@use "../global/colors" as c;
 
 * {
 	padding: 0;
@@ -10,17 +12,53 @@
 body {
 	font-size: u.rem(15);
 	height: 100vh;
-	position:relative;
-	padding-top:u.em(90);
+	position: relative;
+	padding-top: u.em(90);
 }
 
-img{
+img {
 	display: block;
 	width: 100%;
 	height: auto;
 }
 
-.container{
-	width:min(100% - u.rem(30), u.rem(1200));
-	margin-inline:auto;
+.container {
+	width: min(100% - u.rem(30), u.rem(1200));
+	margin-inline: auto;
+}
+
+h1 {
+	font-weight: g.$large;
+	font-size: clamp(u.rem(15), u.rem(38) + 2vw, u.rem(47));
+	line-height: 1;
+	margin-bottom: u.em(6);
+	margin-top:u.em(8);
+}
+
+p {
+	font-weight: g.$small;
+	line-height: 1.5;
+	margin-bottom: u.em(25);
+}
+
+picture {
+	margin-bottom: u.em(15);
+}
+
+button {
+	background-color: c.$Soft-red;
+	border: none;
+	color: c.$Off-white;
+	padding: u.em(18) u.rem(20);
+	width: u.rem(180);
+	text-transform: uppercase;
+	font-size: u.rem(14);
+	font-weight: g.$medium;
+	letter-spacing: u.rem(3);
+	margin-bottom: u.em(85);
+	&:hover {
+		background-color: c.$Very-dark-blue;
+		color: c.$Off-white;
+		transition: 0.3s ease-in;
+	}
 }

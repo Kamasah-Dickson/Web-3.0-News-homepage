@@ -1,7 +1,83 @@
-main{
-    .main-section{
-        display:grid;
-        grid-template-columns: 1fr;
+@use "../global" as g;
+@use "../util" as u;
+main {
+	.main-section {
+		display: grid;
+		grid-template-columns: 1fr;
+		aside {
+			background-color: g.$Very-dark-blue;
+			padding: u.em(20);
+			.box1 {
+				padding-bottom: u.rem(29);
 
-    }
+				h2 {
+					color: g.$Soft-orange;
+					font-weight: g.$large;
+					margin-bottom: u.em(20);
+					font-size: u.rem(25);
+                    
+				}
+			}
+			.box2 {
+				border-bottom: u.rem(1) solid g.$Grayish-blue;
+				border-top: u.rem(1) solid g.$Grayish-blue;
+			}
+			.box2,
+			.box3 {
+				padding-block: u.rem(29);
+			}
+			.box {
+				// padding-block: u.em(10);
+				h3,
+				h4,
+				h5 {
+					margin-bottom: u.rem(15);
+					color: g.$Off-white;
+					font-size: u.rem(20);
+                    &:hover{
+                        color:g.$Soft-orange;
+                        transition:.3s ease-in-out;
+                        cursor:pointer;
+                    }
+				}
+				p {
+					color: g.$Grayish-blue;
+					margin: 0;
+				}
+			}
+		}
+		.footer-news {
+            margin-top:u.em(60);
+            display: flex;
+            flex-direction: column;
+            gap:u.rem(20);
+			.box {
+                @include u.flex;
+                gap: u.rem(29);
+                justify-content: flex-start;
+				img {
+					width: u.rem(100);
+				}
+                .news{
+                    span{
+                        color:g.$Grayish-blue;
+                        font-weight:g.$medium;
+                        font-size:u.rem(30);
+                        margin-bottom:u.em(8);
+                    }
+                    .topic{
+                        margin-bottom:u.rem(8);
+                        color:g.$Very-dark-blue;
+                        font-weight: g.$medium;
+                        font-size: u.rem(19);
+                        &:hover{
+                            color:g.$Soft-red;
+                            transition:.3s ease;
+                            cursor:pointer;
+                        }
+                    }
+                }
+			}
+		}
+	}
 }
