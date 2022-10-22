@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- displays site properly based on user's device -->
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./images/favicon-32x32.png"
+		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="shortcut icon"
+			href="assets/images/favicon-32x32.png"
+			type="image/x-icon"
+		/>
+		<script src="./home.js" defer></script>
+		<link rel="stylesheet" href="./dist/style.css" />
+		<title>Frontend Mentor | News homepage</title>
+	</head>
+
+	<body>
+		<header>
+			<div class="container">
+				<div class="logo">
+					<a href="index.html"
+						><img src="./assets/images/logo.svg" alt="News"
+					/></a>
+				</div>
+				<div class="menu">
+					<img src="./assets/images/icon-menu.svg" alt="Menu" />
+				</div>
+				<div class="navigation-wrapper">
+					<div class="navigation">
+						<div class="close">
+							<img src="./assets/images/icon-menu-close.svg" alt="close" />
+						</div>
+						<ul class="nav-links">
+							<li><a href="#">Home</a></li>
+							<li><a href="#">New</a></li>
+							<li><a href="#">Popular</a></li>
+							<li><a href="#">Trending</a></li>
+							<li><a href="#">Categories</a></li>
+						</ul>
+						<a href=""
+							><img class="me" src="./assets/images/Kamasah.jpg" alt="Github"
+						/></a>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<main>
+			<div class="main-section container">
+				<picture class="banner">
+					<source
+						srcset="./assets/images/image-web-3-mobile.jpg"
+						media="(max-width:476px)"
+					/>
+					<source
+						srcset="./assets/images/image-web-3-desktop.jpg"
+						media="(min-width:768px)"
+					/>
+
+					<img
+						src="./assets/images/image-web-3-desktop.jpg"
+						alt="The Future of web 3.0"
+					/>
+				</picture>
+				<div class="news">
+					<h1>The Bright Future of Web 3.0?</h1>
+					<div class="more">
+						<p>
+							We dive into the next evolution of the web that claims to put the
+							power of the platforms back into the hands of the people. But is
+							it really fulfilling its promise?
+						</p>
+						<button class="btn">Read More</button>
+					</div>
+				</div>
+				<aside>
+					<div class="box1">
+						<h2>New</h2>
+						<h3>Hydrogen VS Electric Cars</h3>
+						<p>Will hydrogen-fueled cars ever catch up to EVs?</p>
+					</div>
+					<div class="box2">
+						<h4>The Downsides of AI Artistry</h4>
+						<p>
+							What are the possible adverse effects of on-demand AI image
+							generation?
+						</p>
+					</div>
+					<div class="box3">
+						<h3>Is VC Funding Drying Up?</h3>
+						<p>
+							Private funding by VC firms is down 50% YOY. We take a look at
+							what that means.
+						</p>
+					</div>
+				</aside>
+				<div class="footer-news">
+					<div class="box box1">
+						<span>01</span>
+						<p class="topic">Reviving Retro PCs</p>
+						<p class="topicinfo">
+							What happens when old PCs are given modern upgrades?
+						</p>
+					</div>
+					<div class="box box2">
+						<span>02</span>
+						<p class="topic">Top 10 Laptops of 2022</p>
+						<p class="topicinfo">
+							Our best picks for various needs and budgets.
+						</p>
+					</div>
+					<div class="box box3">
+						<span>03</span>
+						<p class="topic">The Growth of Gaming</p>
+						<p class="topicinfo">
+							How the pandemic has sparked fresh opportunities.
+						</p>
+					</div>
+				</div>
+			</div>
+		</main>
+	</body>
+</html>

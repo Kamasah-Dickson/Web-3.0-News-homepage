@@ -1,0 +1,26 @@
+@use "../util/" as u;
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: "Inter", sans-serif;
+}
+
+body {
+	font-size: u.rem(15);
+	height: 100vh;
+	position:relative;
+	padding-top:u.em(90);
+}
+
+img{
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+.container{
+	width:min(100% - u.rem(30), u.rem(1200));
+	margin-inline:auto;
+}
