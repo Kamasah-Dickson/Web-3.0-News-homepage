@@ -77,6 +77,9 @@ main {
 							cursor: pointer;
 						}
 					}
+					.topicinfo {
+						color: g.$Grayish-blue;
+					}
 				}
 			}
 		}
@@ -98,6 +101,7 @@ main {
 					font-size: clamp(u.rem(14), u.rem(18) + 1vw, u.rem(17));
 					margin-top: u.rem(0);
 					flex-grow: 1;
+					color: g.$Grayish-blue;
 				}
 			}
 		}
