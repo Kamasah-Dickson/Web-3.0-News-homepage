@@ -1,7 +1,8 @@
 @use "../util/functions" as u;
 $breakpoints-min: (
 	"medium": u.rem(700),
-	"large": u.rem(900),
+	"medium2": u.rem(768),
+	"large": u.rem(1024),
 	"xlarge": u.rem(1440),
 );
 

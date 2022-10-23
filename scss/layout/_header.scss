@@ -6,12 +6,13 @@ header {
 	left: 0;
 	width: 100%;
 	padding-block: u.em(15);
-	background-color: rgba(0, 0, 0, 0.01);
+	background-color: rgba(255, 255, 255, 0.74);
 	backdrop-filter: blur(u.rem(8));
 
 	.container {
 		@include u.flex;
 		@include u.breakpoints(medium) {
+			gap:u.rem(20);
 			.menu {
 				display: none;
 			}

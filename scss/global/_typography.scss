@@ -13,7 +13,7 @@ body {
 	font-size: u.rem(15);
 	height: 100vh;
 	position: relative;
-	padding-top: u.em(90);
+	padding-top: u.em(100);
 }
 
 img {
@@ -23,13 +23,13 @@ img {
 }
 
 .container {
-	width: min(100% - u.rem(30), u.rem(1200));
+	width: min(100% - u.rem(30), u.rem(1100));
 	margin-inline: auto;
 }
 
 h1 {
 	font-weight: g.$large;
-	font-size: clamp(u.rem(15), u.rem(38) + 2vw, u.rem(47));
+	font-size: clamp(u.rem(15), u.rem(38) + 2vw, u.rem(42));
 	line-height: 1;
 	margin-bottom: u.em(6);
 	margin-top:u.em(8);
@@ -56,6 +56,7 @@ button {
 	font-weight: g.$medium;
 	letter-spacing: u.rem(3);
 	margin-bottom: u.em(85);
+	cursor: pointer;
 	&:hover {
 		background-color: c.$Very-dark-blue;
 		color: c.$Off-white;
