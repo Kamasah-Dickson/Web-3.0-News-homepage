@@ -10,6 +10,7 @@ body {
   height: 100vh;
   position: relative;
   padding-top: clamp(6.25em, 7.5em + 2vw, 7.8125rem);
+  background-color: hsl(36deg, 100%, 99%);
 }
 
 img {
@@ -283,6 +284,9 @@ main .main-section .footer-news .box .news .topic:hover {
   transition: 0.3s ease;
   cursor: pointer;
 }
+main .main-section .footer-news .box .news .topicinfo {
+  color: hsl(236deg, 13%, 42%);
+}
 @media (min-width: 48rem) {
   main .main-section .news1 {
     display: grid;
@@ -298,6 +302,7 @@ main .main-section .news1 .more p {
   font-size: clamp(0.875rem, 1.125rem + 1vw, 1.0625rem);
   margin-top: 0rem;
   flex-grow: 1;
+  color: hsl(236deg, 13%, 42%);
 }
 @media (min-width: 48rem) {
   main .main-section {

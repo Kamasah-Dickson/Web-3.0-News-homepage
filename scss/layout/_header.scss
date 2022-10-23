@@ -92,7 +92,7 @@ header {
 					gap: u.rem(44);
 					a {
 						text-decoration: none;
-						font-size:clamp(u.rem(15),u.rem(15) + 1vw, u.rem(16));
+						font-size: clamp(u.rem(15), u.rem(15) + 1vw, u.rem(16));
 						font-weight: g.$small;
 						color: g.$Very-dark-blue;
 						cursor: pointer;
@@ -130,5 +130,4 @@ header {
 			z-index: 99;
 		}
 	}
-	
 }

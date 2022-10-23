@@ -14,7 +14,7 @@ body {
 	height: 100vh;
 	position: relative;
 	padding-top: clamp(u.em(100), u.em(120) + 2vw, u.rem(125));
-	background-color: g.$Grayish-blue;
+	background-color: c.$Off-white;
 }
 
 img {
@@ -40,7 +40,6 @@ p {
 	font-weight: g.$small;
 	line-height: 1.5;
 	margin-bottom: u.em(25);
-	color: g.$Grayish-blue;
 }
 
 picture {
