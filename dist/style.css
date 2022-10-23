@@ -9,13 +9,13 @@ body {
   font-size: 0.9375rem;
   height: 100vh;
   position: relative;
-  padding-top: 6.25em;
+  padding-top: clamp(6.25em, 7.5em + 2vw, 7.8125rem);
 }
 
 img {
   display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
 }
 
 .container {
@@ -25,7 +25,7 @@ img {
 
 h1 {
   font-weight: 800;
-  font-size: clamp(0.9375rem, 2.375rem + 2vw, 2.625rem);
+  font-size: clamp(0.9375rem, 2.375rem + 2vw, 3.125rem);
   line-height: 1;
   margin-bottom: 0.375em;
   margin-top: 0.5em;
@@ -74,6 +74,10 @@ header .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+header .container .logo {
+  width: clamp(1.875rem, 3.125rem + 2vw, 4.375rem);
+  cursor: pointer;
 }
 @media (min-width: 43.75rem) {
   header .container {
@@ -153,7 +157,7 @@ header .container .navigation-wrapper .navigation .nav-links {
   flex-direction: column;
   align-items: flex-start;
   margin-top: 3.125em;
-  gap: 1.6875rem;
+  gap: 2.75rem;
 }
 @media (min-width: 43.75rem) {
   header .container .navigation-wrapper .navigation .nav-links {
@@ -165,7 +169,7 @@ header .container .navigation-wrapper .navigation .nav-links {
 }
 header .container .navigation-wrapper .navigation .nav-links a {
   text-decoration: none;
-  font-size: 1.125rem;
+  font-size: clamp(0.9375rem, 0.9375rem + 1vw, 1rem);
   font-weight: 400;
   color: hsl(240deg, 100%, 5%);
   cursor: pointer;
@@ -199,10 +203,6 @@ header .container .review {
   visibility: visible;
   z-index: 99;
 }
-header .logo {
-  width: 2.8125rem;
-  cursor: pointer;
-}
 
 main .main-section {
   display: grid;
@@ -211,6 +211,9 @@ main .main-section {
 main .main-section aside {
   background-color: hsl(240deg, 100%, 5%);
   padding: 1.25em;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 main .main-section aside .box1 {
   padding-bottom: 1.8125rem;
@@ -267,10 +270,10 @@ main .main-section .footer-news .box .news span {
   color: hsl(233deg, 8%, 79%);
   font-weight: 700;
   font-size: 1.875rem;
-  margin-bottom: 0.5em;
 }
 main .main-section .footer-news .box .news .topic {
   margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
   color: hsl(240deg, 100%, 5%);
   font-weight: 700;
   font-size: 1.1875rem;
@@ -280,58 +283,90 @@ main .main-section .footer-news .box .news .topic:hover {
   transition: 0.3s ease;
   cursor: pointer;
 }
-main .main-section .news {
-  max-width: 34.375rem;
-}
-@media (min-width: 64rem) {
-  main .main-section .news {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1.875rem;
+@media (min-width: 48rem) {
+  main .main-section .news1 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-column: 1/3;
+    gap: 1.25rem;
+  }
+  main .main-section .news1 .more .btn {
+    margin: 0;
   }
 }
-main .main-section .news .more {
-  max-width: 28.75rem;
-}
-main .main-section .news .more p {
-  font-size: clamp(0.875rem, 1.125rem + 1vw, 1.1875rem);
-  margin-top: 0.625rem;
+main .main-section .news1 .more p {
+  font-size: clamp(0.875rem, 1.125rem + 1vw, 1.0625rem);
+  margin-top: 0rem;
   flex-grow: 1;
 }
 @media (min-width: 48rem) {
   main .main-section {
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr 1fr auto;
-    gap: 1.25rem;
+    grid-template-rows: 1fr auto auto;
+    gap: 2.5rem 1.25rem;
   }
-  main .main-section picture {
+  main .main-section .banner {
     grid-column: 1/3;
     grid-row: 1/2;
+    margin: 0;
   }
   main .main-section aside {
     grid-column: 3/4;
     grid-row: 1/3;
   }
-  main .main-section .news {
-    grid-column: 1/3;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 0.9375rem;
-    justify-content: center;
-    max-width: 43.75rem;
+  main .main-section .news1 {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
   }
-  main .main-section .news h1 {
+  main .main-section .news1 h1 {
     margin: 0;
-    line-height: 1.4;
+    line-height: 1.2;
   }
   main .main-section .footer-news {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-column: 1/-1;
     flex-direction: row;
+    margin-top: 0;
   }
   main .main-section .footer-news .box .news {
     flex-direction: column;
   }
+}
+
+.attribution {
+  margin-top: 1.875em;
+  background-color: hsl(240deg, 100%, 5%);
+  padding-block: 0.9375em;
+  color: hsl(5deg, 85%, 63%);
+  font-size: clamp(0.3125rem, 0.1875rem + 2vw, 0.9375rem);
+}
+.attribution .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.attribution p {
+  margin: 0;
+}
+.attribution a {
+  color: hsl(233deg, 8%, 79%);
+  font-weight: 800;
+}
+.attribution img {
+  width: 3.125rem;
+  height: 3.125rem;
+  border-radius: 100%;
+  display: none;
+}
+@media (min-width: 43.75rem) {
+  .attribution img {
+    display: block;
+  }
+}
+.attribution img:hover {
+  border: 0.125rem solid hsl(36deg, 100%, 99%);
+  transition: 0.1s ease;
+  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */

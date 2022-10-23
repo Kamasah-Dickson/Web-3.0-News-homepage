@@ -8,6 +8,7 @@ main {
 		aside {
 			background-color: g.$Very-dark-blue;
 			padding: u.em(20);
+			height: fit-content;
 			.box1 {
 				padding-bottom: u.rem(29);
 
@@ -63,10 +64,10 @@ main {
 						color: g.$Grayish-blue;
 						font-weight: g.$medium;
 						font-size: u.rem(30);
-						margin-bottom: u.em(8);
 					}
 					.topic {
 						margin-bottom: u.rem(8);
+						margin-top:u.rem(8);
 						color: g.$Very-dark-blue;
 						font-weight: g.$medium;
 						font-size: u.rem(19);
@@ -79,50 +80,54 @@ main {
 				}
 			}
 		}
-		.news {
-			max-width: u.rem(550);
-			@include u.breakpoints(large) {
-				@include u.flex;
-                justify-content:center
-				gap: u.rem(30);
+		.news1 {
+			// max-width: u.rem(400);
+			@include u.breakpoints(medium2) {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+				grid-column: 1/3;
+				gap: u.rem(20);
+				.more {
+					.btn {
+						margin: 0;
+					}
+				}
 			}
 			.more {
-                max-width:u.rem(460);
 				p {
-                    font-size: clamp(u.rem(14), u.rem(18) + 1vw, u.rem(19));
-					margin-top: u.rem(10);
+					font-size: clamp(u.rem(14), u.rem(18) + 1vw, u.rem(17));
+					margin-top: u.rem(0);
 					flex-grow: 1;
-                    max-width:u.rem(360);
 				}
 			}
 		}
 		@include u.breakpoints(medium2) {
 			grid-template-columns: repeat(3, 1fr);
-			grid-template-rows: 1fr 1fr auto;
-			gap: u.rem(20);
-			picture {
+			grid-template-rows: 1fr auto auto;
+			gap: u.rem(40) u.rem(20);
+			.banner {
 				grid-column: 1/3;
 				grid-row: 1/2;
+				margin: 0;
 			}
 			aside {
 				grid-column: 3/4;
 				grid-row: 1/3;
 			}
-			.news {
-				grid-column: 1/3;
-				@include u.flex;
-				align-items: flex-start;
-				gap: u.rem(15);
-				justify-content: center;
-				max-width: u.rem(700);
+			.news1 {
+				height: fit-content;
 				h1 {
 					margin: 0;
-					line-height: 1.4;
+					line-height: 1.2;
 				}
 			}
 			.footer-news {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 				grid-column: 1/-1;
 				flex-direction: row;
+				margin-top: 0;
+
 				.box {
 					.news {
 						flex-direction: column;

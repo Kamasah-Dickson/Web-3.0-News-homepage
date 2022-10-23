@@ -13,13 +13,13 @@ body {
 	font-size: u.rem(15);
 	height: 100vh;
 	position: relative;
-	padding-top: u.em(100);
+	padding-top: clamp(u.em(100), u.em(120) + 2vw, u.rem(125));
 }
 
 img {
 	display: block;
 	width: 100%;
-	height: auto;
+	height: 100%;
 }
 
 .container {
@@ -29,10 +29,10 @@ img {
 
 h1 {
 	font-weight: g.$large;
-	font-size: clamp(u.rem(15), u.rem(38) + 2vw, u.rem(42));
+	font-size: clamp(u.rem(15), u.rem(38) + 2vw, u.rem(50));
 	line-height: 1;
 	margin-bottom: u.em(6);
-	margin-top:u.em(8);
+	margin-top: u.em(8);
 }
 
 p {
@@ -63,3 +63,4 @@ button {
 		transition: 0.3s ease-in;
 	}
 }
+

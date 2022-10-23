@@ -1,0 +1,37 @@
+@use "../util" as u;
+@use "../global" as g;
+@use "../global/colors" as c;
+.attribution {
+	margin-top: u.em(30);
+	background-color: c.$Very-dark-blue;
+	padding-block: u.em(15);
+	color: c.$Soft-red;
+	font-size: clamp(u.rem(5), u.rem(3) + 2vw, u.rem(15));
+	.container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	p {
+		margin: 0;
+	}
+	// text-align: center;
+	a {
+		color: c.$Grayish-blue;
+		font-weight: g.$large;
+	}
+	img {
+		width: u.rem(50);
+		height: u.rem(50);
+		border-radius: 100%;
+		display: none;
+		@include u.breakpoints(medium) {
+			display: block;
+		}
+		&:hover {
+			border: u.rem(2) solid c.$Off-white;
+			transition: 0.1s ease;
+			cursor: pointer;
+		}
+	}
+}

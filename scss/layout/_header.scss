@@ -11,8 +11,12 @@ header {
 
 	.container {
 		@include u.flex;
+		.logo {
+			width: clamp(u.rem(30), u.rem(50) + 2vw, u.rem(70));
+			cursor: pointer;
+		}
 		@include u.breakpoints(medium) {
-			gap:u.rem(20);
+			gap: u.rem(20);
 			.menu {
 				display: none;
 			}
@@ -85,10 +89,10 @@ header {
 						align-items: center;
 						margin: 0;
 					}
-					gap: u.rem(27);
+					gap: u.rem(44);
 					a {
 						text-decoration: none;
-						font-size: u.rem(18);
+						font-size:clamp(u.rem(15),u.rem(15) + 1vw, u.rem(16));
 						font-weight: g.$small;
 						color: g.$Very-dark-blue;
 						cursor: pointer;
@@ -126,8 +130,5 @@ header {
 			z-index: 99;
 		}
 	}
-	.logo {
-		width: u.rem(45);
-		cursor: pointer;
-	}
+	
 }
